@@ -1,0 +1,142 @@
+1. Create Environments
+ng g environments
+2. Create a project structure
+enterprise-dashboard/
+│
+├── public/             *
+│   ├── favicon.ico     *   
+│   └── assets/         *
+│       ├── images/     *
+│       └── i18n/       *
+│
+├── src/
+│   ├── main.ts
+│   ├── index.html
+│   ├── styles.scss
+│   │
+│   ├── environments/
+│   │   ├── environment.ts
+│   │   └── environment.development.ts
+│   │
+│   └── app/
+│       │
+│       ├── app.component.ts
+│       ├── app.component.html
+│       ├── app.component.scss
+│       ├── app.config.ts
+│       ├── app.routes.ts
+│       │
+│       ├── core/
+│       │   ├── auth/
+│       │   │   ├── auth.service.ts
+│       │   │   ├── auth.guard.ts
+│       │   │   ├── auth.config.ts
+│       │   │   └── role.guard.ts
+│       │   │
+│       │   ├── http/
+│       │   │   ├── auth.interceptor.ts
+│       │   │   ├── error.interceptor.ts
+│       │   │   └── correlation.interceptor.ts
+│       │   │
+│       │   ├── config/
+│       │   │   ├── app-config.model.ts
+│       │   │   └── app-config.service.ts
+│       │   │
+│       │   ├── error-handling/
+│       │   │   ├── global-error-handler.ts
+│       │   │   └── error-logging.service.ts
+│       │   │
+│       │   └── monitoring/
+│       │       └── telemetry.service.ts
+│       │
+│       ├── layout/
+│       │   ├── shell/
+│       │   │   ├── shell.component.ts
+│       │   │   ├── shell.component.html
+│       │   │   └── shell.component.scss
+│       │   ├── header/
+│       │   ├── sidebar/
+│       │   └── footer/
+│       │
+│       ├── shared/
+│       │   ├── ui/
+│       │   │   ├── button/
+│       │   │   ├── data-table/
+│       │   │   ├── search-box/
+│       │   │   ├── date-picker/
+│       │   │   ├── modal/
+│       │   │   ├── pagination/
+│       │   │   ├── loading-spinner/
+│       │   │   └── empty-state/
+│       │   │
+│       │   ├── directives/
+│       │   ├── pipes/
+│       │   ├── validators/
+│       │   ├── utils/
+│       │   └── models/
+│       │
+│       ├── features/
+│       │   ├── dashboard/
+│       │   │   ├── dashboard.routes.ts
+│       │   │   ├── pages/
+│       │   │   │   └── dashboard-page/
+│       │   │   ├── components/
+│       │   │   │   ├── kpi-card/
+│       │   │   │   └── revenue-chart/
+│       │   │   ├── data-access/
+│       │   │   │   └── dashboard-api.service.ts
+│       │   │   ├── state/
+│       │   │   │   └── dashboard.store.ts
+│       │   │   └── models/
+│       │   │       └── dashboard.model.ts
+│       │   │
+│       │   ├── claims/
+│       │   │   ├── claims.routes.ts
+│       │   │   ├── pages/
+│       │   │   │   ├── claims-list/
+│       │   │   │   └── claim-details/
+│       │   │   ├── components/
+│       │   │   ├── data-access/
+│       │   │   ├── state/
+│       │   │   └── models/
+│       │   │
+│       │   ├── reports/
+│       │   │   ├── reports.routes.ts
+│       │   │   ├── pages/
+│       │   │   ├── components/
+│       │   │   ├── data-access/
+│       │   │   ├── state/
+│       │   │   └── models/
+│       │   │
+│       │   └── admin/
+│       │       ├── admin.routes.ts
+│       │       ├── pages/
+│       │       ├── components/
+│       │       ├── data-access/
+│       │       └── models/
+│       │
+│       └── testing/
+│           ├── test-data/
+│           └── test-helpers/
+│
+├── e2e/
+│   ├── auth.spec.ts
+│   ├── dashboard.spec.ts
+│   └── claims.spec.ts
+│
+├── docs/
+│   ├── architecture.md
+│   ├── coding-standards.md
+│   ├── api-guidelines.md
+│   └── adr/
+│       ├── 001-standalone-architecture.md
+│       └── 002-state-management.md
+│
+├── angular.json
+├── package.json
+├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.spec.json
+├── eslint.config.js
+├── .gitignore
+└── README.md
